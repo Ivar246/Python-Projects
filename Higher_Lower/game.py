@@ -1,6 +1,5 @@
 import random
-from tkinter import Y
-from data import data
+from game_data import data
 from art import logo
 from os import system
 from replit import clear
@@ -22,8 +21,11 @@ def compare(user_input, A, B):
         if B['follower_count'] > A['follower_count']:
             return True
         return False
+    
 
-
+print(logo)
+    
+    
 def play():
     dict_A = choose_people()
     dict_B = choose_people()
@@ -32,7 +34,6 @@ def play():
         
     correct = True
     score = 0
-    print(logo)
     
     while correct:
         print(f"compare A: {dict_A['name']}, {dict_A['description']}, {dict_A['country']}")
